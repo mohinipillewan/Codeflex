@@ -1,0 +1,120 @@
+<html></html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #070914 0%, #000000 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: rgba(104, 101, 52, 0.758);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 800px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .container::before, .container::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+        }
+        .container::before {
+            top: -50px;
+            left: -50px;
+        }
+        .container::after {
+            bottom: -50px;
+            right: -50px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .sign-up-btn {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 10px;
+            cursor: pointer;
+            color: white;
+        }
+        .social-btn i {
+            margin-right: 10px;
+        }
+        .social-btn.google {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .social-btn.facebook {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2 class="text-white text-2xl mb-6">Sign Up</h2>
+            <div class="form-group">
+                <input type="text" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Confirm Password">
+            </div>
+        </div>
+        <div class="right text-white">
+            <button class="sign-up-btn mb-4">Sign Up</button>
+            <p class="mb-4">Already have an account? <a href="#" class="text-blue-400">Log in</a></p>
+            <p class="mb-4">Or</p>
+            <div class="social-btn google">
+                <i class="fab fa-google"></i> Sign up with Google
+            </div>
+            <div class="social-btn facebook">
+                <i class="fab fa-facebook-f"></i> Sign up with Facebook
+            </div>
+        </div>
+    </div>
+</body>
+</html>
